@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap");
+
+main {
+    height: calc(90vh - 125px - 100px);
+    background-color: #373636;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  place-items: center;
+  justify-content: center;
+
+  font-family: "Nunito", sans-serif;
+}
+
+body::before {
+  z-index: -100;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/background.svg");
+  background-size: contain;
+  animation: moveBackground 17s linear infinite;
+  filter: hue-rotate(0deg);
+}
+
+@keyframes moveBackground {
+  0% {
+      background-position: 0% 0%;
+      filter: hue-rotate(0deg); 
+  }
+  30% {
+      filter: hue-rotate(-30deg);
+  }
+  50% {
+      filter: hue-rotate(0deg);
+  }
+  70% {
+    filter: hue-rotate(30deg);
+  }
+  100% {
+      background-position: 0% -100%;
+      filter: hue-rotate(0deg); 
+  }
+}
+
+
+
+/* Header */
+.header-bg {
+  position: absolute;
+    z-index: 0;
+    top: 0 !important;
+    background-color: #373636;
+    width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    left: 0 !important;
+    background-color: #373636;
+    width: 30%;
+    min-height: 50px;
+    max-height: 50px;
+    top: 0;
+    display: flex;
+    box-sizing: border-box;
+}
+
+
+
+header nav {
+  display: flex;
+  margin: 10px;
+  margin-top: 20px;
+  z-index: 50 !important;
+}
+header nav li a .pkb-shd {
+  width: 50px;
+  height: 50px;
+  margin: 15px 15px 0 15px;
+  border-radius: 200px;
+  padding: 10px;
+  position: absolute;
+  box-shadow: 
+  0 0 30px 0 #000000,
+  0 0 30px 0 #000000 inset;
+}
+header nav li a img {
+  margin: 10px 10px 0 10px;
+  position: relative;
+  padding: 5px;
+  width: 70px;
+}
+header nav li a img:hover {
+    transform: scale(1.15);
+}
+@media (max-width: 800px) {
+  header {
+    transform: scale(0.7);
+    max-width: 60px !important;
+    min-width: 60px !important;
+  }
+  header nav {
+    max-width: 260px !important;
+    min-width: 260px !important;
+    margin-left: -50px !important;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 3;
+    left: 3;
+  }
+  header nav li a img::before {
+    width: 35px;
+    height: 35px;
+    padding: 0px;
+    margin: 1px 1px 0 1px;
+  }
+  header nav li a .pkb-shd {
+    transform: scale(0.5) !important;
+  }
+}
+
+
+/* Footer */
+
+footer {
+   
+    background-color: #373636;
+    width: 100%;
+    min-height: 100px;
+    height: 120px;
+    position: absolute;
+    z-index: -10;
+    margin-top: calc(100vh - 120px);
+    
+  }

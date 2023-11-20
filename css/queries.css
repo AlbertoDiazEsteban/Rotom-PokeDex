@@ -1,0 +1,165 @@
+/* ------ ------ ------ ------ ------ ------ */
+
+
+.screen {
+    margin-top: 25px;
+    width: 913px;
+    height: 515px;
+    border-radius: 25px;
+}
+.screen iframe {
+    width: 913px;
+    height: 515px;
+    border-radius: 25px;
+}
+.pc {
+    width: 968px;
+    height: 567px;
+    border-radius: 43px;
+    z-index: 1;
+}
+
+@media (max-width: 800px) {
+    .all {
+        margin-top: 110px;
+    }
+    .screen {
+        width: 255.636px;
+        height: 512.303px;
+        border-radius: 21px;
+    }
+    .screen iframe {
+        width: 255.636px;
+        height: 512.303px;
+        border-radius: 21px;
+    }
+    .backgroundscreen {
+        max-width: 255.636px;
+        max-height: 512.303px;
+        min-width: 255.636px;
+        min-height: 512.303px;
+        border-radius: 21px;
+    }
+    .pokeball-container {
+        transform: scale(0.5);
+        margin-top: -200px;
+    } 
+    .pc {
+        width: 297.555px;
+        height: 551.486px;
+        border-radius: 32px;
+        z-index: 1;
+    }
+    .pico1{
+        transform: scale(0.65);
+        margin-top: 200px;
+    } 
+    .pico {
+        transform: scale(0.65);
+        margin-top: -33px;
+    }
+}
+
+
+
+/* Phone*/
+
+
+@media (max-width: 800px) {
+    .face {
+        transform: scale(0.65);
+    }
+    .button {
+        position: absolute;
+        z-index: 5;
+        margin-top: 400px;
+        transform: scale(1.1);
+    }
+    .screen {
+        flex-direction: column;
+    } 
+    .backgroundscreen {
+        flex-direction: column;
+    } 
+    .img-pokemon {
+        max-width: 100%;
+        min-height: 200px;
+        max-height: 200px;
+        margin-left: 50px;
+        transform: scale(1.9) !important;
+        margin-top: 40px !important;
+        position: absolute;
+    }
+    .data-pokemon {
+        max-width: 84%;
+        min-height: 47%;
+        max-height: 47%;
+        bottom: 0;  
+        position: absolute;  
+    }
+      
+}
+
+
+
+/* Pokedex queries */
+@media (max-width: 800px) {
+    .data-pokemon h1 {
+        display: none;
+    } 
+    .data-pokemon {
+        border-radius: 10px 10px 20px 20px !important;
+        height: 100px !important;
+    }
+   .search-bar {
+        transform: scale(0.73);
+        margin-top: -5px;
+    }
+    .search-bar #seach {
+        width: 70% !important;
+    }
+    #pokedex .name {
+        margin: 0px 0 0 0 !important;
+        font-size: 20px !important;
+    }
+    .type-container .type, .type-container .type-secondary {
+        transform: scale(0.9) !important;
+        margin-top: 0px !important;
+    }
+    #pokedex .number {
+        transform: scale(0.7);
+        position: absolute;
+        margin-top: -23px !important;
+    }
+    #pokedex .info  {
+        transform: scale(0.7) !important;
+        margin: -18px !important;
+        margin-left: -190px !important;
+        width: 600px !important;
+    }
+    #stats {
+        transform: scale(0.9) !important;
+        margin-top: 10px !important;
+    }
+    .stat-desc {
+        min-width: 30px !important;
+        max-width: 30px !important;
+        margin-left: -20px !important;   
+    }
+    .stat-number {
+        min-width: 30px !important;
+        max-width: 30px !important;
+        margin-left: 0px !important; 
+    }
+    .stat-bar {
+        transform: scaleX(1.1) !important;
+    }
+    .bar-outer {
+        min-width: 127.5px !important;
+        max-width: 127.5px !important;
+        
+    }
+}
+
+
+

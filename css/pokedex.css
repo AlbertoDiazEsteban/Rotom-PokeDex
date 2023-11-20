@@ -1,0 +1,213 @@
+/*  
+screen
+img-pokemon
+data-pokemon 
+*/
+               
+
+.screen {
+    display: flex;
+    /* background-image: url("../img/background_rotom_pc.svg");
+    background-color: rgb(163, 199, 199); 
+    background-size: cover; */
+}
+
+.screenshadow {
+    z-index: 10;
+    box-shadow:
+    inset 0 10px 7px rgba(255, 255, 255, 0.2),
+    inset 10px 0 7px rgba(255, 255, 255, 0.2),
+    inset 0 -10px 7px rgba(0, 0, 0, 0.2),
+    inset -10px 0 7px rgba(0, 0, 0, 0.2);
+}
+
+
+.img-pokemon {
+    max-width: 55%;
+    min-width: 50.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: perspective(1000px)
+}
+.img-pokemon img {
+    transform: translateZ(100px)
+}
+
+.data-pokemon {
+    min-width: 45%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px 20px 20px 10px;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}     
+.data-pokemon h1 {
+    margin: 5px;
+    font-size: 25px;
+}          
+.data-pokemon button {
+    width: 55px;
+    height: 55px;
+    background-color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+.data-pokemon button img {
+    width: 55px;
+    height: 55px;
+    border-radius: 60px;
+    border: none;
+    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+}
+.data-pokemon button img:active {
+    animation: search 0.2s ease;
+}
+@keyframes search {
+    0% {  transform: rotate(0);  }
+    100% {  transform: rotate(720deg);  }
+}
+.data-pokemon input {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(91, 91, 91);
+    padding-left: 50px;
+    background-image: url("../img/search_dark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+
+    background-color: #e9e9e9;
+    border: none;
+    height: 50px;
+    width: 180px;
+    border-radius: 50px;
+    margin-left: -20px;
+}
+
+
+
+
+/* SPRITES */
+
+.img-pokemon img {
+    text-align: center;
+    width: 80%;
+    height: 90%;
+    align-items: center;
+    object-fit: contain;
+    z-index: 5;
+    margin: auto auto;
+    filter: drop-shadow(0 0 100 red)
+  }
+.img-pokemon .shadow {
+    /* width: 20%;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(50, 50, 50);
+    mix-blend-mode: multiply;
+    filter: blur(15px);
+    bottom: 50px;
+    margin: 0 auto;
+    position: absolute; */
+    display: none;
+  }
+  .rotom-pc .screen .type-container {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+  }
+
+
+
+  /* Pokedex elements */
+#pokedex .name {
+    margin: 30px 0 0 0;
+    font-size: 40px;
+}
+#pokedex .number {
+    margin: 0;
+    font-weight: 600;
+}
+#pokedex .info {
+    margin: 20px 0 0 0;
+    font-weight: 600;
+    font-size: 18px;
+}
+.type-container {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+.type-container .type, .type-container .type-secondary {
+    display: flex;
+    justify-content: space-around;
+    margin: 12px;
+    width: 90px;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
+    align-items: center;
+    transform: scale(1.15);
+}
+#stats {
+    margin-top: 30px;
+    align-items: center;
+}
+#stats .stat-row {
+    display: flex;
+    justify-content: center;
+    text-align: right;
+    align-items: center;
+}
+#stats .stat-row .stat-desc {
+    margin: 5px;
+    font-weight: 800;
+    text-align: right;
+    min-width: 50px;
+    max-width: 50px;
+}
+#stats .stat-row .stat-number {
+    margin-left: -20px;
+    text-align: right;
+    min-width: 50px;
+    max-width: 50px;
+}
+
+#stats .stat-row .stat-bar {
+
+    margin-left: 10px;
+    width: 60%;
+    display: flex;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#stats .stat-row .stat-bar .bar-inner {
+    height: 27px;
+    position: absolute;
+}
+#stats .stat-row .stat-bar .bar-outer {
+    height: 27px;
+    min-width: 255px;
+    opacity: 0.5;
+    position: relative;
+}
+#stats .stat-row .stat-bar .bar-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px !important;
+}

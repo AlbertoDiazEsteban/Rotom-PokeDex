@@ -1,0 +1,116 @@
+
+  /* Body */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+    margin-top: calc(1vh - 200px);
+}
+
+.all {
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    place-items: center;
+    margin-top: 150px;
+    transform: perspective(1000px)
+    
+}
+
+.screen {
+    z-index: 3;
+    position: absolute; 
+}
+
+.screen::after {
+    background-color: rgb(193, 193, 193);
+}
+
+.screengradient {
+    z-index: 10;
+    box-shadow:
+    inset 0 10px 7px rgba(255, 255, 255, 0.15),
+    inset 10px 0 7px rgba(255, 255, 255, 0.15),
+    inset 0 -10px 7px #0000005f,
+    inset -10px 0 7px #0000005f;
+} 
+
+.turnoffscreen {
+    z-index: 14;
+    background-color: rgb(63, 63, 63);
+    animation: gltichscreen 1s infinite linear;
+}
+@keyframes gltichscreen{
+    30%{ filter: invert(14%); }
+    40%{ filter: invert(24%); }
+    50%{ filter: invert(7%); }
+    60%{ filter: invert(10%); }
+    70%{ filter: invert(12%); }
+    80%{ filter: invert(9%); }
+    90%{ filter: invert(20%); }
+    100%{ filter: invert(11%); }
+  }
+
+/* ------ ------- ------ dispositivo ------ ----- ----- */
+.pc {
+    width: 968px;
+    height: 567px;
+    border-radius: 43px;
+    z-index: 1;
+}
+.gradient {
+    background: linear-gradient(126deg, #f36343 100%, #FA8256 100%, #f36343 100%);
+    z-index: 0;
+}
+.shadow {
+    box-shadow: 0px 40px 180px 0px #CB251A inset;
+    z-index: 1;
+    box-shadow:
+    inset 0 -10px 7px #cb261aa4,
+    inset -10px 0 7px #cb261aa4;
+}
+.pico1{
+    z-index: -5;
+    margin-top: 150px;
+    margin-bottom: -160px;
+    filter: saturate(105%);
+} 
+.pico svg path {
+    z-index: 5;
+    background: linear-gradient(180deg, #EC6D4F 32.4%, #CB251A 69.37%, rgba(200, 0, 0, 0.00) 69.38%);
+    justify-content: center;
+}
+.face {
+    margin-top: -50px;
+}
+
+.button {
+    position: absolute;
+    z-index: 5;
+    margin-top: 455px;
+    transform: scale(1.2);
+}
+
+.button button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: rgb(64, 64, 64);
+    border: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button button:hover {
+    box-shadow: 0 0px 20px rgba(255, 255, 255, 0.929);
+    color: #4FABBF;
+}
+
+
+
+
+

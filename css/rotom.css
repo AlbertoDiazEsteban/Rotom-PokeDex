@@ -1,0 +1,200 @@
+:root {
+    --lt: #fff;
+    --md-lt: #E5E5E5;
+    --b-lt: #8CD8E9;
+    --b-dk: #4FABBF;
+    --b-sat: #96FEFF;
+    --dk: #373737;
+} 
+
+
+
+.face {
+    z-index: 15;
+    margin-top: 90px;
+    position: absolute;
+    align-items: center;
+    place-items: center;
+    justify-content: center;
+    width: 310px;
+    height: 310px;
+    background-color: #ffffff00;
+    border: 5px solid var(--lt);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    animation: ring 5s ease infinite;
+}
+@keyframes ring {
+    0%, 33%, 100% {
+    }
+    75% {
+        border: 10px solid var(--b-sat);
+        box-shadow: 
+        0 0px 20px rgba(255, 255, 255, 0.929),
+        inset 0 0px 20px rgba(255, 255, 255, 0.929);
+        padding-bottom: 5px;
+        }
+}
+
+.eyes {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 90%;
+    margin-top: -50px;
+}
+
+.eye-left {
+    transform: rotate(-15deg);
+    flex-shrink: 0;
+}
+
+.eye-right {
+    transform: rotate(15deg);
+    flex-shrink: 0;
+}
+
+.white {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 225px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #E5E5E5 51.15%, #FFF 51.16%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.pupil {
+    margin: auto;
+    width: 57px;
+    height: 142px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #4FABBF 41.77%, #8CD8E9 66.25%);
+    animation: parpadeo 7s ease infinite;
+}
+@keyframes parpadeo {
+    0%, 18%, 22%, 46%, 50%, 54%, 88%, 92%, 100% {
+        height: 142px;
+        width: 57px;
+        border-radius: 50%;
+        margin: 0px;
+        background: linear-gradient(180deg, #4FABBF 41.77%, #8CD8E9 66.25%);
+    }
+    20%, 48%, 52%, 90% {
+        margin: 71px 0px;
+        height: 1px;
+        width: 57px;
+        border-radius: 50%;
+        }
+}
+
+
+.mouth {
+    width: 66px; 
+    height: 30px;
+    transform: rotate(-15deg);
+    background: var(--lt);
+    -moz-border-radius:  0 0 100px 100px;
+    -webkit-border-radius:  5px 5px 100px 100px;
+    border-radius: 0 0 100px 100px;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 0 0px 20px rgba(255, 255, 255, 0.3);
+    animation: smile 15s ease infinite;
+}
+@keyframes smile {
+    0%, 24%, 100% {
+        width: 66px; 
+        height: 30px;
+        transform: rotate(-15deg);
+        -moz-border-radius:  0 0 100px 100px;
+        -webkit-border-radius:  5px 5px 100px 100px;
+        border-radius: 8px 8px 100px 100px;
+    }
+    51%, 74% {
+        width: 66px; 
+        height: 30px;
+        transform: rotate(15deg);
+        -moz-border-radius:  0 0 100px 100px;
+        -webkit-border-radius:  5px 5px 100px 100px;
+        border-radius: 8px 8px 100px 100px;
+    }
+    26%, 49%, 76%, 95% {
+        width: 35px; 
+        height: 40px;
+        transform: rotate(0deg);
+        background: var(--lt);
+        -moz-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;  
+    }
+}
+
+
+
+
+
+.glitch::before {
+    content: '';
+    position: absolute;
+    opacity: 0.5;
+    mix-blend-mode: hard-light;
+}
+.glitch:hover::before {
+    animation: glitch1 0.2s linear infinite;
+}
+@keyframes glitch1 {
+    0% { 
+        margin-left: 0;
+        margin-top: 0px;
+        filter: hue-rotate(0deg);
+        }
+    10% {
+        margin-left: 5px;
+        margin-top: 0px;
+    }
+    20% {
+        margin-left: -5px;
+        margin-top: 0px;
+    }
+    30% {
+        margin-left: 15px;
+        margin-top: 0px;
+    }
+    40% {
+        margin-left: 5px;
+        margin-top: 0px;
+    }
+    50% {
+        margin-left: -15px;
+        margin-top: 0px;
+    }
+    60% {
+        margin-left: -5px;
+        margin-top: 0px;
+    }
+    70% {
+        margin-left: 0px;
+        margin-top: -15px;
+    }
+    80% {
+        margin-left: -35px;
+        margin-top: -25px;
+    }
+    81% {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    81% {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    100% {
+        margin-left: 0px;
+        margin-top: 0px;
+        filter: hue-rotate(360deg);
+    }
+}
+
+

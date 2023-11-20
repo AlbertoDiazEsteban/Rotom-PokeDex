@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-shadow: 
+    inset 0 10px 7px rgba(255, 255, 255, 0.15), 
+    inset 10px 0 7px rgba(255, 255, 255, 0.15), 
+    inset 0 -10px 7px #0000005f, inset -10px 0 7px #0000005f;
+    background-color: #baabc7;
+}
+
+.backgroundscreen {
+    margin-top: 0px;
+    width: 913px;
+    height: 515px;
+    border-radius: 25px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    z-index: -30;   
+}
+.pokeball-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: -70px;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+}
+.pokeball {
+    align-items: center;
+    margin: 5px;
+}
+.pk-bt {
+    bottom: 0;
+}
+
+
+.pk-uno {
+    transform: scale(1) rotate(100deg);
+    animation: giroUno 50s linear infinite;
+    opacity: 0.2;
+}
+
+.pk-dos {
+    transform: scale(0.7) rotate(10deg);
+    animation: giroDos 20s linear infinite;
+    opacity: 0.3;
+    margin-top: -30px;
+    margin-bottom: 30px; 
+}
+
+.pk-tres {
+    transform: scale(0.5) rotate(-300deg);
+    animation: giroTres 20s linear infinite;
+    opacity: 0.3;
+    margin-left: -30px;
+    margin-right: 30px;
+}
+
+.pk-cuatro {
+    transform: scale(1.1) rotate(-90deg);
+    animation: giroCuatro 50s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes giroUno {
+    0% {transform: scale(1) rotate(100deg);}
+    100% {transform: scale(1) rotate(-260deg);}
+}
+
+@keyframes giroDos {
+    0% {transform: scale(0.7) rotate(-300deg);}
+    100% {transform: scale(0.7) rotate(60deg);}
+}
+
+@keyframes giroTres {
+    0% {transform: scale(0.8) rotate(0deg);}
+    100% {transform: scale(0.8) rotate(360deg);}
+}
+
+@keyframes giroCuatro {
+    0% {transform: scale(0.9) rotate(0deg);}
+    100% {transform: scale(0.9) rotate(-360deg);
+}
+}

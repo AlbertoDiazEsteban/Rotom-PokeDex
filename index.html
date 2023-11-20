@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotom-dex</title>
+    <link rel="icon" href="img/pokeball.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rotom.css">
+    <link rel="stylesheet" href="css/queries.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <li>
+                <a href="pokedex.html" class="random-btn">
+                    <div class="pkb-shd"></div>
+                    <img src="/img/pokeball.svg" alt="pokeball">
+                </a>
+            </li>
+            <li>
+                <a href="list.html">
+                    <div class="pkb-shd"></div>
+                    <img src="/img/superball.svg" alt="pokeball">
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <div class="pkb-shd"></div>
+                    <img src="/img/ultraball.svg" alt="pokeball">
+                </a>
+            </li>
+            
+        </nav>
+    </header>
+
+    <div class="header-bg"></div>
+
+   
+
+
+    <div class="container" data-tilt>
+        <div class="pico1">
+            <img src="img/pico.svg" alt="pico">
+        </div>
+        <div class="all glitch">
+            <!-- face -->
+            <div class="face">
+                <div class="eyes">
+                    <div class="eye-left">
+                        <div class="white">
+                            <div class="pupil"></div>
+                        </div>
+                    </div>
+                    <div class="eye-right">
+                        <div class="white">
+                            <div class="pupil"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mouth"></div>
+                
+            </div>
+            <!-- button start-->
+            <div class="button">
+                <a href="pokedex.html"><button>START</button></a>
+            </div>
+            <!-- pantalla -->
+            <div class="screen screengradient turnoffscreen"></div>
+            <!-- dispositivo -->
+            <div class="pc gradient shadow"></div>  
+             
+        </div>
+        <div class="pico">
+            <img src="img/pico1.svg" alt="pico">
+        </div>   
+    </div>
+
+    <footer>
+    </footer>
+
+    <!-- librería https://micku7zu.github.io/vanilla-tilt.js/ -->
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+    VanillaTilt.init(document.querySelector(".card"), {
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 0.5,
+	});
+
+    VanillaTilt.init(document.querySelector(".screengradient"), {
+        max: 0,
+		speed: 0,
+        glare: true,
+        "max-glare": 1,
+	});
+    </script>
+</body>
+</html>

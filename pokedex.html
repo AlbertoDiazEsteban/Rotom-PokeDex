@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotom-dex</title>
+    <link rel="icon" href="img/pokeball.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rotom.css">
+    <link rel="stylesheet" href="css/queries.css">
+    <link rel="stylesheet" href="css/pokedex.css">
+    <link rel="stylesheet" href="css/pokeballs.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <li>
+                <a href="pokedex.html" class="random-btn">
+                    <div class="pkb-shd"></div>
+                    <img src="/img/pokeball.svg" alt="pokeball">
+                </a>
+            </li>
+            <li>
+                <a href="list.html">
+                    <div class="pkb-shd"></div>
+                    <img src="/img/superball.svg" alt="pokeball">
+                </a>
+            </li>
+            <li>
+                <a href="index.html">
+                    <div class="pkb-shd"></div>
+                    <img src="/img/ultraball.svg" alt="pokeball">
+                </a>
+            </li>
+        </nav>
+    </header>
+
+    <div class="header-bg"></div>
+
+    <div class="container" data-tilt data-tilt-perspective="1000">
+        <div class="pico1">
+            <img src="img/pico.svg" alt="pico">
+        </div>
+        <div class="all">
+            <!-- pantalla -->
+            <div class="screen screenshadow" data-tilt-glare data-tilt-max-glare="0.8">
+                <div class="img-pokemon"></div>
+                <div class="data-pokemon">
+                   <h1>Pokedex</h1>
+                    <div class="search-bar">
+                        <label for="search"></label>
+                        <input type="text" id="search">
+                        <button class="btn-search">
+                            <img src="/img/pokeball.svg" alt="pokeball">
+                        </button>
+                    </div>
+                    <div id="pokedex"></div>
+                    <div id="stats"></div> 
+                </div>
+            </div>
+            <!-- fondo de pantalla animado -->
+            <div class="backgroundscreen" data-tilt-glare data-tilt-max-glare="0.8">
+                <div class="pokeball-container">
+                    <div class="row">
+                        <div class="pokeball pk-tp pk-uno">
+                            <img src="../img/whiteball.svg" alt="pokeball" class="wh-pkb">
+                        </div>
+                        <div class="pokeball pk-bt pk-tres">
+                            <img src="../img/whiteball.svg" alt="pokeball" class="wh-pkb">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="pokeball pk-tp pk-dos">
+                            <img src="../img/whiteball.svg" alt="pokeball" class="wh-pkb">
+                        </div>
+                        <div class="pokeball pk-bt pk-cuatro">
+                            <img src="../img/whiteball.svg" alt="pokeball" class="wh-pkb">
+                        </div>
+                    </div>   
+                </div>
+                <div class="rgt">
+                </div>
+            </div>
+            <!-- dispositivo -->
+            <div class="pc gradient shadow"></div>               
+        </div>
+        <div class="pico">
+            <img src="img/pico1.svg" alt="pico">
+        </div>   
+    </div>
+
+
+    <footer>
+    </footer>
+
+    <script src="/js/index.js"></script>
+    <script src="/js/new-random.js"></script>
+    <!-- librería https://micku7zu.github.io/vanilla-tilt.js/ -->
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+    VanillaTilt.init(document.querySelector(".card"), {
+		max: 10,
+		speed: 400,
+        glare: true,
+        "max-glare": 0.5,
+	});
+
+    VanillaTilt.init(document.querySelector("img-pokemon"), {
+		max: 10,
+		speed: 400,
+        glare: true,
+        "max-glare": 0.5,
+	});
+
+    VanillaTilt.init(document.querySelector(".screengradient"), {
+        max: 0,
+		speed: 0,
+        glare: true,
+        "max-glare": 1,
+	});
+    </script>
+</body>
+</html>
